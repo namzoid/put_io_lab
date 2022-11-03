@@ -86,17 +86,29 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: 
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
 
 **Scenariusz główny:**
-1. ...
+1. [Kupujący](#ac2) znalazł interesującą go ofertę i wystawia cenę wyższą niż cena początkowa.
+2. System weryfikuje że wystawiona kwota jest wyższa niż cena początkowa.
+3. [Kupujący](#ac2) wpisuje swoje dane (oraz dane dla dostawy przy wygraniu aukcji).
+4. System weryfikuje poprawność wpisanych danych.
+5. [Kupujący](#ac2) akceptuje regulamin obowiązku zapłaty przy wygraniu aukcji.
+6. System oczekuje na zakończenie aukcji. 
+7. System sprawdza bazę z danymi oferty i wybiera największą kwotę wpisaną przez użytkowników.
+8. [Kupujący](#ac2) otrzymuje powiadomienie o wygraniu aukcji.
+9. [Kupujący](#ac2) opłaca produkt za pomocą karty płatniczej.
+10. [Sprzedający](#ac1) dostaje powiadpmienie o wgraniu opłaty.
+
+
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+1.A. Kwota kupującego została przebita.
+* 4.A.1. System informuje użytkownika o przebiciu jego oferty.
+* 4.A.2  System daje możliwość wpisania większej kwoty.
 
 ---
 
