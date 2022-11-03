@@ -50,11 +50,20 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC1](#uc1): Ustalenie początkowej ceny produktu
+* [UC1](#uc1): Ustalenie czasu do zakończenia aukcji
+* [UC2](#uc2): Dostaje powiadomienie o wniesieniu opłaty 
+* [UC2](#uc2): Przekazanie danych kupującego do firmy wysyłającej produkt
+* [UC2](#uc2): Otrzymanie powiadomienia o dostarczeniu przesyłki
 
-[Kupujący](#ac2)
-* ...
-
+[Kupujący](#ac2):
+* [BR1](#br1): Oferuje kwotę większą od początkowej
+* [BR1](#br1): Wpisuje swoje dane
+* [BR1](#br1): Akceptuje regulamin oraz obowiązek zapłaty przy wygraniu
+* [BR1](#br1): Dostaje powiadomienie o przebiciu ceny
+* [BR1](#br1): Oferuje wyższą cenę
+* [BR2](#br2): Dostaje powiadomienie o wygraniu aukcji
+* [BR2](#br2): Wnosi opłatę za produkt
 ---
 <a id="uc1"></a>
 ### UC1: Wystawienie produktu na aukcję
