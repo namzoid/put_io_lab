@@ -50,6 +50,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
+* [UC2](#uc2):
 * [UC3](#uc3): Otrzymanie płatności za produkt
 * [UC3](#uc3): Przekazanie danych kupującego do firmy wysyłającej produkt
 * [UC3](#uc3): Otrzymanie powiadomienia o dostarczeniu przesyłki ?????????????????
@@ -93,7 +94,8 @@ Osoba chcąca zakupić produkt na aukcji.
 6. System informuje o użytkownika o przebiciu jego oferty.
 7. System oczekuje na zakończenie aukcji. 
 8. System sprawdza bazę z danymi oferty i wybiera największą kwotę wpisaną przez użytkowników.
-9. [Kupujący](#ac2) otrzymuje powiadomienie o wygraniu aukcji.
+9. System wysyła powiadomienie [kupującemu](#ac2) o wygraniu aukcji.
+10. System informuje [sprzedającego](#ac1) o wygraniu przez użytkownika aukcji.
 
 
 
@@ -110,13 +112,39 @@ Osoba chcąca zakupić produkt na aukcji.
 * 4.A.3. Przejdź do kroku 5.
 
 ---
-UC3
+<a id="uc2"></a>
+### UC3: Opłata produktu
 
-9. [Kupujący](#ac2) opłaca produkt za pomocą karty płatniczej.
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+
+1. [Sprzedający](#ac1) przekazuje dane dla opłaty produktu.
+2. System weryfikuje poprawność wpisanych danych.
+3. System wysyła powiadomienie [kupującemu](#ac2) o wprowadzeniu przez [sprzedającego](#ac1) danych dla opłaty produktu.
+4. System daje możliwość [kupującemu](#ac2) wybrać różne sposoby opłaty.
+5. [Kupujący](#ac2) wybiera odpowiednią dla siebie metodę płatności.
+6. [Kupujący](#ac2) wpisuje swoje dane do przekazania płatności.
+7. System weryfikuje poprawność wpisanych danych.
+8. [Kupujący](#ac2) wykonuje opłatę produktu.
+9. System otrzymuje potwierdzenie opłaty.
 10. [Sprzedający](#ac1) dostaje powiadomienie o wgraniu opłaty.
+11. System wysyła powiadomienie [sprzedającemu](#ac1) o otrzymaniu płatności za produkt.
+
+**Scenariusze alternatywne:** 
+
+2.A. Podano niepoprawne lub niekompletne dane dla opłaty produktu.
+* 2.A.1. System informuje o błędnie podanych danych.
+* 2.A.2. Przejdź do kroku 3.
+
+7.A. Podano niepoprawne lub niekompletne dane dla przekazania płatności.
+* 7.A.1. System informuje o błędnie podanych danych.
+* 7.A.2. Przejdź do kroku 8.
+
+
 ---
 
-## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
+## Obiekty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
 
 ### BO1: Aukcja
 
