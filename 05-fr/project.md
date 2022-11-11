@@ -50,14 +50,13 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* [UC2](#uc2):
 * [UC3](#uc3): Otrzymanie płatności za produkt
-* [UC3](#uc3): Przekazanie danych kupującego do firmy wysyłającej produkt
-* [UC3](#uc3): Otrzymanie powiadomienia o dostarczeniu przesyłki ?????????????????
+* [UC4](#uc4): Wysyłka produktu
 
 [Kupujący](#ac2):
-* [UC2](#uc2): Licytacja
+* [UC2](#uc2): Licytacja produktu
 * [UC3](#uc3): Opłata produktu
+* [UC4](#uc4): Otrzymanie produktu
 
 ---
 <a id="uc1"></a>
@@ -140,6 +139,19 @@ Osoba chcąca zakupić produkt na aukcji.
 7.A. Podano niepoprawne lub niekompletne dane dla przekazania płatności.
 * 7.A.1. System informuje o błędnie podanych danych.
 * 7.A.2. Przejdź do kroku 8.
+
+---
+<a id="uc2"></a>
+### UC4: Wysyłanie produktu
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+
+1. System przekazuje dane kupującego dla dostawy do [sprzedającego](#ac1).
+2. [Sprzedający](#ac1) przekazuje dane do firmy organizującej dostawy oraz ustala dzień odbioru paczki przez kuriera.
+3. [Sprzedający](#ac1) oddaje paczkę z towarem do kuriera.
+4. System powiadamia [kupującego](#ac2) o możliwości śledzenia przesyłki poprzez kod wprowadzony przez firmę kurierską.
 
 
 ---
