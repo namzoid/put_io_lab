@@ -151,8 +151,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 1. System przekazuje dane kupującego dla dostawy do [sprzedającego](#ac1).
 2. [Sprzedający](#ac1) przekazuje dane do firmy organizującej dostawy oraz ustala dzień odbioru paczki przez kuriera.
-3. [Sprzedający](#ac1) oddaje paczkę z towarem do kuriera.
-4. System powiadamia [kupującego](#ac2) o możliwości śledzenia przesyłki poprzez kod wprowadzony przez firmę kurierską.
+3. System powiadamia [kupującego](#ac2) o możliwości śledzenia przesyłki poprzez kod wprowadzony przez firmę kurierską.
 
 
 ---
