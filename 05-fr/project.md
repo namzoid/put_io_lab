@@ -86,12 +86,12 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) znalazł interesującą go ofertę i wystawia cenę wyższą niż cena początkowa.
+1. [Kupujący](#ac2) znalazł interesującą go ofertę i wystawia cenę wyższą niż cena początkowa/cena obecna.
 2. System weryfikuje że wystawiona kwota jest wyższa niż cena początkowa.
 3. [Kupujący](#ac2) wpisuje swoje dane (oraz dane dla dostawy przy wygraniu aukcji).
 4. System weryfikuje poprawność wpisanych danych.
 5. [Kupujący](#ac2) akceptuje regulamin obowiązku zapłaty przy wygraniu aukcji.
-6. System informuje o użytkownika o przebiciu jego oferty.
+6. System informuje użytkownika o przebiciu jego oferty.
 7. System oczekuje na zakończenie aukcji. 
 8. System sprawdza bazę z danymi oferty i wybiera największą kwotę wpisaną przez użytkowników.
 9. System wysyła powiadomienie [kupującemu](#ac2) o wygraniu aukcji.
@@ -101,7 +101,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 **Scenariusze alternatywne:** 
 
-2.A. Wystawiona przez użytkownika kwota nie jest wyższa niż cena początkowa.
+2.A. Wystawiona przez użytkownika kwota nie jest wyższa niż cena początkowa/cena obecna.
 * 4.A.1. System prosi użytkownika wpisać inną kwotę.
 * 4.A.2  System daje możliwość wpisania większej kwoty.
 * 4.A.3  Przejdź do kroku 3.
