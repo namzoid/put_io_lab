@@ -18,8 +18,8 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
 2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))
 3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([UC3](#uc3))
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC4](#uc4))
 
 **Scenariusze alternatywne:** 
 
@@ -57,6 +57,7 @@ Osoba chcąca zakupić produkt na aukcji.
 * [UC2](#uc2): Licytacja produktu
 * [UC3](#uc3): Opłata produktu
 * [UC4](#uc4): Otrzymanie produktu
+* [UC5](#uc5): Wystawienie oceny aukcji/sprzedającemu.
 
 ---
 <a id="uc1"></a>
@@ -111,7 +112,7 @@ Osoba chcąca zakupić produkt na aukcji.
 * 4.A.3. Przejdź do kroku 5.
 
 ---
-<a id="uc2"></a>
+<a id="uc3"></a>
 ### UC3: Opłata produktu
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
@@ -141,7 +142,7 @@ Osoba chcąca zakupić produkt na aukcji.
 * 7.A.2. Przejdź do kroku 8.
 
 ---
-<a id="uc2"></a>
+<a id="uc4"></a>
 ### UC4: Wysyłanie produktu
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
@@ -177,14 +178,17 @@ Złożenie oferty wymaga zaproponowania kwoty wyższej niż aktualnie oferowana 
 <a id="br2"></a>
 ### BR2: Rozstrzygnięcie aukcji
 
-Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (upłynięcia czasu) złożył najwyższą ofertę.
+Aukcję wygrywa ten z [Kupujących](#ac2), który w momencie jej zakończenia (upłynięcia czasu) złożył najwyższą ofertę.
 
 ## Macierz CRUDL
 
 
-| Przypadek użycia                                  | Aukcja | Produkt | ... |
+| Przypadek użycia                                  | Aukcja | Produkt |  |
 | ------------------------------------------------- | ------ | ------- | --- |
-| UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
+| UC1: Wystawienia produktu na aukcję               |    C   |    C    | 
+| UC2: Licytacja produktu                                              |  C, R, U   |  R, U    |  |
+| UC3: Opłata produktu                                              |  D   |   C, R, U   | 
+| UC4: Wysyłka produktu                                              |    |  D    | 
+
 
 
