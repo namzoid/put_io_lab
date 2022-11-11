@@ -50,20 +50,14 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* [UC1](#uc1): Ustalenie początkowej ceny produktu
-* [UC1](#uc1): Ustalenie czasu do zakończenia aukcji
-* [UC2](#uc2): Dostaje powiadomienie o wniesieniu opłaty 
-* [UC2](#uc2): Przekazanie danych kupującego do firmy wysyłającej produkt
-* [UC2](#uc2): Otrzymanie powiadomienia o dostarczeniu przesyłki
+* [UC3](#uc3): Otrzymanie płatności za produkt
+* [UC3](#uc3): Przekazanie danych kupującego do firmy wysyłającej produkt
+* [UC3](#uc3): Otrzymanie powiadomienia o dostarczeniu przesyłki ?????????????????
 
 [Kupujący](#ac2):
-* [BR1](#br1): Oferuje kwotę większą od początkowej
-* [BR1](#br1): Wpisuje swoje dane
-* [BR1](#br1): Akceptuje regulamin oraz obowiązek zapłaty przy wygraniu
-* [BR1](#br1): Dostaje powiadomienie o przebiciu ceny
-* [BR1](#br1): Oferuje wyższą cenę
-* [BR2](#br2): Dostaje powiadomienie o wygraniu aukcji
-* [BR2](#br2): Wnosi opłatę za produkt
+* [UC2](#uc2): Licytacja
+* [UC3](#uc3): Opłata produktu
+
 ---
 <a id="uc1"></a>
 ### UC1: Wystawienie produktu na aukcję
@@ -86,9 +80,9 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: 
+### UC2: Licytacja
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
 1. [Kupujący](#ac2) znalazł interesującą go ofertę i wystawia cenę wyższą niż cena początkowa.
@@ -96,20 +90,30 @@ Osoba chcąca zakupić produkt na aukcji.
 3. [Kupujący](#ac2) wpisuje swoje dane (oraz dane dla dostawy przy wygraniu aukcji).
 4. System weryfikuje poprawność wpisanych danych.
 5. [Kupujący](#ac2) akceptuje regulamin obowiązku zapłaty przy wygraniu aukcji.
-6. System oczekuje na zakończenie aukcji. 
-7. System sprawdza bazę z danymi oferty i wybiera największą kwotę wpisaną przez użytkowników.
-8. [Kupujący](#ac2) otrzymuje powiadomienie o wygraniu aukcji.
-9. [Kupujący](#ac2) opłaca produkt za pomocą karty płatniczej.
-10. [Sprzedający](#ac1) dostaje powiadpmienie o wgraniu opłaty.
+6. System informuje o użytkownika o przebiciu jego oferty.
+7. System oczekuje na zakończenie aukcji. 
+8. System sprawdza bazę z danymi oferty i wybiera największą kwotę wpisaną przez użytkowników.
+9. [Kupujący](#ac2) otrzymuje powiadomienie o wygraniu aukcji.
 
 
 
 **Scenariusze alternatywne:** 
 
-1.A. Kwota kupującego została przebita.
-* 4.A.1. System informuje użytkownika o przebiciu jego oferty.
+2.A. Wystawiona przez użytkownika kwota nie jest wyższa niż cena początkowa.
+* 4.A.1. System prosi użytkownika wpisać inną kwotę.
 * 4.A.2  System daje możliwość wpisania większej kwoty.
+* 4.A.3  Przejdź do kroku 3.
 
+4.A. Podano niekompletne dane.
+* 4.A.1. System informuje o niekompletności podanych danych.
+* 4.A.2  System daje możliwość wprowadzić wszystkie niepodane dane.
+* 4.A.3. Przejdź do kroku 5.
+
+---
+UC3
+
+9. [Kupujący](#ac2) opłaca produkt za pomocą karty płatniczej.
+10. [Sprzedający](#ac1) dostaje powiadomienie o wgraniu opłaty.
 ---
 
 ## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
