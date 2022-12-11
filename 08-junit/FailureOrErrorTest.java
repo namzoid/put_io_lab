@@ -9,16 +9,17 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FailureOrErrorTest {
 
     @Test
-    public void test1(){ //failure
+    public void test1(){ // Pytanie 4.1: failure 
         Assertions.assertEquals(4, 2);
     }
 
     @Test
-    public void test2() throws Exception{ //error
+    public void test2() throws Exception{ // error 
         throw new Exception("Exception");
 
     }
 
+    // Pytanie 4.2: oczekuję na klasę AssertionFailedError 
     @Test
     public void test3() {
         try{
