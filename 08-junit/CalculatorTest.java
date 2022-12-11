@@ -11,6 +11,7 @@ class CalculatorTest extends Calculator {
 
     private Calculator calculator;
 
+    // Pytanie 3.1: przy zmienionej @BeforeEach na @BeforeAll dla poprawnego działania testów funkcja setUp musi być statyczna 
     @BeforeEach
     public void setUp(){
         calculator = new Calculator();
