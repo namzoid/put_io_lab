@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-// Pytanie 5.1: typ testowania
+// Pytanie 5.1: typ testowania whitebox
 // Pytanie 5.2: 4 możliwe ścieżki działania
 
 class AudiobookPriceCalculatorTest extends AudiobookPriceCalculator{
